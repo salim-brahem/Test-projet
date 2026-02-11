@@ -1,9 +1,0 @@
-Règles globales SAFE (Spring Boot REST):
-- Ne change pas la logique métier.
-- Ne change pas les signatures publiques (public/protected).
-- Ne change pas les routes REST (annotations @GetMapping/@PostMapping/...).
-- Pas de nouvelle dépendance, pas de modification pom.xml.
-- Refactor seulement: simplification, extraction méthode private, null-safety, Optional safe, duplication, lisibilité.
-- Respect layering: Controller -> Service -> Repository.
-- DTO à la frontière HTTP; éviter de retourner Entity.
-- Gestion d'erreurs: ResponseStatusException ou @ControllerAdvice si déjà présent.

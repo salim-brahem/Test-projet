@@ -1,0 +1,22 @@
+version: 1
+rules:
+  - id: JAVA_NO_SYSTEM_OUT
+    severity: MAJOR
+    file_globs: ["**/*.java"]
+    regex: "\\bSystem\\.out\\.println\\("
+    message: "Éviter System.out.println ; utiliser un logger."
+    fix_hint: "Remplacer par log.info/debug. Utiliser slf4j LoggerFactory ou Lombok @Slf4j."
+
+  - id: JAVA_EMPTY_CATCH
+    severity: MAJOR
+    file_globs: ["**/*.java"]
+    regex: "catch\\s*\\([^\\)]*\\)\\s*\\{\\s*\\}"
+    message: "catch vide détecté."
+    fix_hint: "Logger l'exception ou la relancer."
+
+  - id: HARD_CODED_SECRET
+    severity: CRITICAL
+    file_globs: ["**/*.yml", "**/*.yaml", "**/*.properties"]
+    regex: "(?i)\\b(password|passwd|pwd|token|secret)\\b\\s*[:=]\\s*([^\\s#]+)"
+    message: "Secret potentiel en dur."
+    fix_hint: "Remplacer par variable d'env (ex: ${DB_PASSWORD})."

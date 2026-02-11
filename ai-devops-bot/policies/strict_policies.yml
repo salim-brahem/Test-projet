@@ -1,0 +1,20 @@
+rules:
+  - id: TESTS_REQUIRED_FOR_LOGIC_CHANGES
+    severity: CRITICAL
+    description: If business/service logic changes, tests must be added or updated.
+
+  - id: NO_SENSITIVE_DATA_IN_LOGS
+    severity: CRITICAL
+    description: Never log secrets, tokens, passwords, personal data.
+
+  - id: LAYERED_ARCHITECTURE
+    severity: MAJOR
+    description: Controllers must not access repositories directly; go through services.
+
+  - id: DTO_CONSISTENCY
+    severity: MAJOR
+    description: Changes to DTOs must be reflected across mappers/controllers/clients.
+
+  - id: ERROR_HANDLING
+    severity: MAJOR
+    description: Validate inputs and handle errors explicitly; no silent failures.
