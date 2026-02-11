@@ -1,0 +1,102 @@
+[
+  {
+    "source": "sonar",
+    "issue_key": "AZxHH_mDPw2SI8EKf84t",
+    "rule": "java:S2259",
+    "severity": "MAJOR",
+    "type": "BUG",
+    "file": "src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java",
+    "line": 36,
+    "message": "A \"NullPointerException\" could be thrown; \"registration\" is nullable here."
+  },
+  {
+    "source": "sonar",
+    "issue_key": "AZxHH_mSPw2SI8EKf84x",
+    "rule": "java:S2259",
+    "severity": "MAJOR",
+    "type": "BUG",
+    "file": "src/main/java/com/example/gestionstationskii/services/SkierServicesImpl.java",
+    "line": 52,
+    "message": "A \"NullPointerException\" could be thrown; \"skier\" is nullable here."
+  },
+  {
+    "source": "sonar",
+    "issue_key": "AZxHH_mSPw2SI8EKf84w",
+    "rule": "java:S2259",
+    "severity": "MAJOR",
+    "type": "BUG",
+    "file": "src/main/java/com/example/gestionstationskii/services/SkierServicesImpl.java",
+    "line": 84,
+    "message": "A \"NullPointerException\" could be thrown; \"skier\" is nullable here."
+  },
+  {
+    "source": "sonar",
+    "issue_key": "AZxHH_j3Pw2SI8EKf84K",
+    "rule": "java:S125",
+    "severity": "MAJOR",
+    "type": "CODE_SMELL",
+    "file": "src/main/java/com/example/gestionstationskii/repositories/IRegistrationRepository.java",
+    "line": 25,
+    "message": "This block of commented-out lines of code should be removed."
+  },
+  {
+    "source": "sonar",
+    "issue_key": "AZxHH_lVPw2SI8EKf84b",
+    "rule": "java:S106",
+    "severity": "MAJOR",
+    "type": "CODE_SMELL",
+    "file": "src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java",
+    "line": 18,
+    "message": "Replace this use of System.out or System.err by a logger."
+  },
+  {
+    "source": "sonar",
+    "issue_key": "AZxHH_lWPw2SI8EKf84c",
+    "rule": "java:S106",
+    "severity": "MAJOR",
+    "type": "CODE_SMELL",
+    "file": "src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java",
+    "line": 20,
+    "message": "Replace this use of System.out or System.err by a logger."
+  },
+  {
+    "source": "sonar",
+    "issue_key": "AZxHH_lWPw2SI8EKf84d",
+    "rule": "java:S106",
+    "severity": "MAJOR",
+    "type": "CODE_SMELL",
+    "file": "src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java",
+    "line": 26,
+    "message": "Replace this use of System.out or System.err by a logger."
+  },
+  {
+    "source": "sonar",
+    "issue_key": "AZxHH_lWPw2SI8EKf84e",
+    "rule": "java:S106",
+    "severity": "MAJOR",
+    "type": "CODE_SMELL",
+    "file": "src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java",
+    "line": 28,
+    "message": "Replace this use of System.out or System.err by a logger."
+  },
+  {
+    "source": "sonar",
+    "issue_key": "AZxHH_lWPw2SI8EKf84f",
+    "rule": "java:S106",
+    "severity": "MAJOR",
+    "type": "CODE_SMELL",
+    "file": "src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java",
+    "line": 34,
+    "message": "Replace this use of System.out or System.err by a logger."
+  },
+  {
+    "source": "sonar",
+    "issue_key": "AZxHH_lWPw2SI8EKf84g",
+    "rule": "java:S106",
+    "severity": "MAJOR",
+    "type": "CODE_SMELL",
+    "file": "src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java",
+    "line": 36,
+    "message": "Replace this use of System.out or System.err by a logger."
+  }
+]
