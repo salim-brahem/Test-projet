@@ -1,0 +1,78 @@
+--- a/src/main/java/com/example/gestionstationskii/repositories/IRegistrationRepository.java
++++ b/src/main/java/com/example/gestionstationskii/repositories/IRegistrationRepository.java
+@@ -22,7 +22,4 @@
+ 
+ public interface IRegistrationRepository extends CrudRepository<Registration, Long> {
+-
+-    // List<Registration> findBySkierFirstNameAndSkierLastName(String firstName, String lastName);
+-
+ }
+--- a/src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java
++++ b/src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java
+@@ -6,4 +6,6 @@
+ import lombok.AllArgsConstructor;
++import lombok.extern.slf4j.Slf4j;
+ import org.springframework.stereotype.Service;
+ 
++@Slf4j
+ @Service
+@@ -15,25 +17,25 @@
+     public List<Course> retrieveAllCourses() {
+-        System.out.println("retrieveAllCourses");
++        log.info("Retrieving all courses");
+         return (List<Course>) courseRepository.findAll();
+     }
+ 
+     @Override
+     public Course addCourse(Course course) {
+-        System.out.println("addCourse");
++        log.info("Adding new course");
+         return courseRepository.save(course);
+     }
+ 
+     @Override
+     public Course updateCourse(Course course) {
+-        System.out.println("updateCourse");
++        log.info("Updating course id: {}", course.getShortName());
+         return courseRepository.save(course);
+     }
+ 
+     @Override
+     public Course retrieveCourse(Long numCourse) {
+-        System.out.println("retrieveCourse");
++        log.info("Retrieving course num: {}", numCourse);
+         return courseRepository.findById(numCourse).orElse(null);
+     }
+ 
+     @Override
+     public void deleteCourse(Long numCourse) {
+-        System.out.println("deleteCourse");
++        log.info("Deleting course num: {}", numCourse);
+         courseRepository.deleteById(numCourse);
+--- a/src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java
++++ b/src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java
+@@ -33,4 +33,4 @@
+     public Registration addRegistrationAndAssignToSkier(Registration registration, Long numSkier) {
+-        Skier skier = skierRepository.findById(numSkier).orElse(null);
+-        Registration registration1 = registrationRepository.findById(registration.getNumRegistration()).orElse(null);
+-        registration1.setSkier(skier);
++        Skier skier = skierRepository.findById(numSkier).orElseThrow(() -> new IllegalArgumentException("Skier not found"));
++        Registration registration1 = registrationRepository.findById(registration.getNumRegistration())
++                .orElseThrow(() -> new IllegalArgumentException("Registration not found"));
++        registration1.setSkier(skier);
+--- a/src/main/java/com/example/gestionstationskii/services/SkierServicesImpl.java
++++ b/src/main/java/com/example/gestionstationskii/services/SkierServicesImpl.java
+@@ -49,4 +49,4 @@
+     public Skier assignSkierToCourse(Long numSkier, Long numCourse) {
+-        Skier skier = skierRepository.findById(numSkier).orElse(null);
+-        Course course = courseRepository.findById(numCourse).orElse(null);
++        Skier skier = skierRepository.findById(numSkier).orElseThrow(() -> new IllegalArgumentException("Skier not found"));
++        Course course = courseRepository.findById(numCourse).orElseThrow(() -> new IllegalArgumentException("Course not found"));
+         // logic to add course to skier
+@@ -81,4 +81,4 @@
+     public Skier assignSkierToPiste(Long numSkier, Long numPiste) {
+-        Skier skier = skierRepository.findById(numSkier).orElse(null);
+-        Piste piste = pisteRepository.findById(numPiste).orElse(null);
++        Skier skier = skierRepository.findById(numSkier).orElseThrow(() -> new IllegalArgumentException("Skier not found"));
++        Piste piste = pisteRepository.findById(numPiste).orElseThrow(() -> new IllegalArgumentException("Piste not found"));
+         // logic to add piste to skier

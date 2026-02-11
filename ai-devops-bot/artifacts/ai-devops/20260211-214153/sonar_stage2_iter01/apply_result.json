@@ -1,0 +1,5 @@
+{
+  "applied": false,
+  "method": "failed",
+  "error": "error: ai-devops-bot/src/main/java/com/example/gestionstationskii/repositories/IRegistrationRepository.java: No such file or directory\nerror: ai-devops-bot/src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java: No such file or directory\nerror: ai-devops-bot/src/main/java/com/example/gestionstationskii/services/SkierServicesImpl.java: No such file or directory\n\nerror: ai-devops-bot/src/main/java/com/example/gestionstationskii/repositories/IRegistrationRepository.java: does not exist in index\nerror: ai-devops-bot/src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java: does not exist in index\nerror: ai-devops-bot/src/main/java/com/example/gestionstationskii/services/SkierServicesImpl.java: does not exist in index\n"
+}
