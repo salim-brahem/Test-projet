@@ -1,0 +1,102 @@
+[
+  {
+    "source": "sonar",
+    "issue_key": "AZxHH_nKPw2SI8EKf85G",
+    "rule": "java:S2699",
+    "severity": "BLOCKER",
+    "type": "CODE_SMELL",
+    "file": "src/test/java/com/example/gestionstationskii/GestionStationSkiiApplicationTests.java",
+    "line": 10,
+    "message": "Add at least one assertion to this test case."
+  },
+  {
+    "source": "sonar",
+    "issue_key": "AZxHH_izPw2SI8EKf84E",
+    "rule": "java:S1948",
+    "severity": "CRITICAL",
+    "type": "CODE_SMELL",
+    "file": "src/main/java/com/example/gestionstationskii/entities/Course.java",
+    "line": 38,
+    "message": "Make \"registrations\" private or transient."
+  },
+  {
+    "source": "sonar",
+    "issue_key": "AZxHH_jiPw2SI8EKf84H",
+    "rule": "java:S1948",
+    "severity": "CRITICAL",
+    "type": "CODE_SMELL",
+    "file": "src/main/java/com/example/gestionstationskii/entities/Instructor.java",
+    "line": 29,
+    "message": "Make \"courses\" private or transient."
+  },
+  {
+    "source": "sonar",
+    "issue_key": "AZxHH_jRPw2SI8EKf84F",
+    "rule": "java:S1948",
+    "severity": "CRITICAL",
+    "type": "CODE_SMELL",
+    "file": "src/main/java/com/example/gestionstationskii/entities/Piste.java",
+    "line": 34,
+    "message": "Make \"skiers\" private or transient."
+  },
+  {
+    "source": "sonar",
+    "issue_key": "AZxHH_dLPw2SI8EKf84C",
+    "rule": "java:S1948",
+    "severity": "CRITICAL",
+    "type": "CODE_SMELL",
+    "file": "src/main/java/com/example/gestionstationskii/entities/Skier.java",
+    "line": 47,
+    "message": "Make \"registrations\" private or transient."
+  },
+  {
+    "source": "sonar",
+    "issue_key": "AZxHH_mDPw2SI8EKf84u",
+    "rule": "java:S3776",
+    "severity": "CRITICAL",
+    "type": "CODE_SMELL",
+    "file": "src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java",
+    "line": 42,
+    "message": "Refactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed."
+  },
+  {
+    "source": "sonar",
+    "issue_key": "AZxHH_lBPw2SI8EKf84X",
+    "rule": "java:S4684",
+    "severity": "CRITICAL",
+    "type": "VULNERABILITY",
+    "file": "src/main/java/com/example/gestionstationskii/controllers/CourseRestController.java",
+    "line": 23,
+    "message": "Replace this persistent entity with a simple POJO or DTO object."
+  },
+  {
+    "source": "sonar",
+    "issue_key": "AZxHH_lBPw2SI8EKf84Y",
+    "rule": "java:S4684",
+    "severity": "CRITICAL",
+    "type": "VULNERABILITY",
+    "file": "src/main/java/com/example/gestionstationskii/controllers/CourseRestController.java",
+    "line": 35,
+    "message": "Replace this persistent entity with a simple POJO or DTO object."
+  },
+  {
+    "source": "sonar",
+    "issue_key": "AZxHH_kbPw2SI8EKf84O",
+    "rule": "java:S4684",
+    "severity": "CRITICAL",
+    "type": "VULNERABILITY",
+    "file": "src/main/java/com/example/gestionstationskii/controllers/InstructorRestController.java",
+    "line": 23,
+    "message": "Replace this persistent entity with a simple POJO or DTO object."
+  },
+  {
+    "source": "sonar",
+    "issue_key": "AZxHH_kbPw2SI8EKf84P",
+    "rule": "java:S4684",
+    "severity": "CRITICAL",
+    "type": "VULNERABILITY",
+    "file": "src/main/java/com/example/gestionstationskii/controllers/InstructorRestController.java",
+    "line": 28,
+    "message": "Replace this persistent entity with a simple POJO or DTO object."
+  }
+]

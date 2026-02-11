@@ -1,0 +1,61 @@
+--- a/src/main/java/com/example/gestionstationskii/repositories/IRegistrationRepository.java
++++ b/src/main/java/com/example/gestionstationskii/repositories/IRegistrationRepository.java
+@@ -22,5 +22,4 @@
+ public interface IRegistrationRepository extends CrudRepository<Registration, Long> {
+-
+-    // List<Registration> findBySkierFirstNameAndSkierLastName(String firstName, String lastName);
+ }
+--- a/src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java
++++ b/src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java
+@@ -3,2 +3,3 @@
+ import com.example.gestionstationskii.entities.Course;
++import lombok.extern.slf4j.Slf4j;
+ import org.springframework.stereotype.Service;
+@@ -7,2 +8,3 @@
+ @Service
++@Slf4j
+ public class CourseServicesImpl implements ICourseServices {
+@@ -15,5 +17,5 @@
+     public List<Course> retrieveAllCourses() {
+-        System.out.println("Retrieving all courses");
++        log.info("Retrieving all courses");
+         List<Course> courses = (List<Course>) courseRepository.findAll();
+-        System.out.println("Total courses found: " + courses.size());
++        log.info("Total courses found: {}", courses.size());
+         return courses;
+@@ -23,5 +25,5 @@
+     public Course addCourse(Course course) {
+-        System.out.println("Adding new course");
++        log.info("Adding new course");
+         Course savedCourse = courseRepository.save(course);
+-        System.out.println("Course saved with ID: " + savedCourse.getCourseId());
++        log.info("Course saved with ID: {}", savedCourse.getCourseId());
+         return savedCourse;
+@@ -31,5 +33,5 @@
+     public Course updateCourse(Course course) {
+-        System.out.println("Updating course with ID: " + course.getCourseId());
++        log.info("Updating course with ID: {}", course.getCourseId());
+         Course updatedCourse = courseRepository.save(course);
+-        System.out.println("Course updated successfully");
++        log.info("Course updated successfully");
+         return updatedCourse;
+--- a/src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java
++++ b/src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java
+@@ -35,3 +35,4 @@
+         Registration registration = registrationRepository.findById(numRegistration).orElse(null);
+-        skier.getRegistrations().add(registration);
++        if (registration != null) {
++            skier.getRegistrations().add(registration);
++        }
+--- a/src/main/java/com/example/gestionstationskii/services/SkierServicesImpl.java
++++ b/src/main/java/com/example/gestionstationskii/services/SkierServicesImpl.java
+@@ -51,3 +51,3 @@
+         Skier skier = skierRepository.findById(numSkier).orElse(null);
+-        if (skier.getSubscription().getTypeSub().equals(TypeSubscription.ANNUAL)) {
++        if (skier != null && skier.getSubscription() != null && skier.getSubscription().getTypeSub().equals(TypeSubscription.ANNUAL)) {
+             // logic
+@@ -83,3 +83,3 @@
+         Skier skier = skierRepository.findById(numSkier).orElse(null);
+-        skier.getRegistrations().forEach(registration -> {
++        if (skier != null && skier.getRegistrations() != null) {
++            skier.getRegistrations().forEach(registration -> {

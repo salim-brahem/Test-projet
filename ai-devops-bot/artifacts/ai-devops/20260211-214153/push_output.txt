@@ -1,0 +1,6 @@
+remote: 
+remote: Create a pull request for 'bot/fix-6' on GitHub by visiting:        
+remote:      https://github.com/salim-brahem/Test-projet/pull/new/bot/fix-6        
+remote: 
+To https://github.com/salim-brahem/Test-projet.git
+ * [new branch]      bot/fix-6 -> bot/fix-6

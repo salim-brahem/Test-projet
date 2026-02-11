@@ -1,0 +1,2462 @@
+{
+  "issues": [
+    {
+      "key": "AZxHH_lBPw2SI8EKf84X",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/controllers/CourseRestController.java",
+      "project": "gestion-station-skii",
+      "line": 23,
+      "hash": "409d073b3e8b3f21b5bb560a834251e0",
+      "textRange": {
+        "startLine": 23,
+        "endLine": 23,
+        "startOffset": 48,
+        "endOffset": 54
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "cwe",
+        "owasp-a5",
+        "spring"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lBPw2SI8EKf84Y",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/controllers/CourseRestController.java",
+      "project": "gestion-station-skii",
+      "line": 35,
+      "hash": "d7bba8e64c926781726c47e0b9d99743",
+      "textRange": {
+        "startLine": 35,
+        "endLine": 35,
+        "startOffset": 51,
+        "endOffset": 57
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "cwe",
+        "owasp-a5",
+        "spring"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_kbPw2SI8EKf84O",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/controllers/InstructorRestController.java",
+      "project": "gestion-station-skii",
+      "line": 23,
+      "hash": "dbeb29ac046efc3efadc1241b5d11b25",
+      "textRange": {
+        "startLine": 23,
+        "endLine": 23,
+        "startOffset": 60,
+        "endOffset": 70
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "cwe",
+        "owasp-a5",
+        "spring"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_kbPw2SI8EKf84P",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/controllers/InstructorRestController.java",
+      "project": "gestion-station-skii",
+      "line": 28,
+      "hash": "1bd232efc7506331569f8b0f74a58abb",
+      "textRange": {
+        "startLine": 28,
+        "endLine": 28,
+        "startOffset": 71,
+        "endOffset": 81
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "cwe",
+        "owasp-a5",
+        "spring"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_kbPw2SI8EKf84N",
+      "rule": "java:S117",
+      "severity": "MINOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/controllers/InstructorRestController.java",
+      "project": "gestion-station-skii",
+      "line": 39,
+      "hash": "6661e02f588f022a44dbb9de54788a55",
+      "textRange": {
+        "startLine": 39,
+        "endLine": 39,
+        "startOffset": 63,
+        "endOffset": 73
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "convention"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_kbPw2SI8EKf84Q",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/controllers/InstructorRestController.java",
+      "project": "gestion-station-skii",
+      "line": 39,
+      "hash": "6661e02f588f022a44dbb9de54788a55",
+      "textRange": {
+        "startLine": 39,
+        "endLine": 39,
+        "startOffset": 63,
+        "endOffset": 73
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "cwe",
+        "owasp-a5",
+        "spring"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_kQPw2SI8EKf84M",
+      "rule": "java:S1128",
+      "severity": "MINOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/controllers/PisteRestController.java",
+      "project": "gestion-station-skii",
+      "line": 9,
+      "hash": "bc85862ff7cdbffb89e6786b139dccc4",
+      "textRange": {
+        "startLine": 9,
+        "endLine": 9,
+        "startOffset": 7,
+        "endOffset": 48
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this unused import 'com.example.gestionstationskii.entities'.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "unused"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_kQPw2SI8EKf84L",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/controllers/PisteRestController.java",
+      "project": "gestion-station-skii",
+      "line": 24,
+      "hash": "5d4741ef66f75a17dbe18583d61c33fc",
+      "textRange": {
+        "startLine": 24,
+        "endLine": 24,
+        "startOffset": 45,
+        "endOffset": 50
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "cwe",
+        "owasp-a5",
+        "spring"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_k5Pw2SI8EKf84V",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/controllers/RegistrationRestController.java",
+      "project": "gestion-station-skii",
+      "line": 21,
+      "hash": "058bfbe5def41338f149a00d48cf86a3",
+      "textRange": {
+        "startLine": 21,
+        "endLine": 21,
+        "startOffset": 70,
+        "endOffset": 82
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "cwe",
+        "owasp-a5",
+        "spring"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_k5Pw2SI8EKf84W",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/controllers/RegistrationRestController.java",
+      "project": "gestion-station-skii",
+      "line": 36,
+      "hash": "fd2b38dfd2a902943931fc8cb166e943",
+      "textRange": {
+        "startLine": 36,
+        "endLine": 36,
+        "startOffset": 79,
+        "endOffset": 91
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "cwe",
+        "owasp-a5",
+        "spring"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_koPw2SI8EKf84R",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/controllers/SkierRestController.java",
+      "project": "gestion-station-skii",
+      "line": 22,
+      "hash": "d78c50e2f8ebeede83d3c8d1f7697e6d",
+      "textRange": {
+        "startLine": 22,
+        "endLine": 22,
+        "startOffset": 45,
+        "endOffset": 50
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "cwe",
+        "owasp-a5",
+        "spring"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_koPw2SI8EKf84S",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/controllers/SkierRestController.java",
+      "project": "gestion-station-skii",
+      "line": 28,
+      "hash": "daaec800aded28af0a866dd6f35909e8",
+      "textRange": {
+        "startLine": 28,
+        "endLine": 28,
+        "startOffset": 62,
+        "endOffset": 67
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "cwe",
+        "owasp-a5",
+        "spring"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_kxPw2SI8EKf84T",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/controllers/SubscriptionRestController.java",
+      "project": "gestion-station-skii",
+      "line": 24,
+      "hash": "23bc53a3fb66fae8be76f65cae039155",
+      "textRange": {
+        "startLine": 24,
+        "endLine": 24,
+        "startOffset": 66,
+        "endOffset": 78
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "cwe",
+        "owasp-a5",
+        "spring"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_kxPw2SI8EKf84U",
+      "rule": "java:S4684",
+      "severity": "CRITICAL",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/controllers/SubscriptionRestController.java",
+      "project": "gestion-station-skii",
+      "line": 40,
+      "hash": "0a2951fa40c9d6c024fee2404480b075",
+      "textRange": {
+        "startLine": 40,
+        "endLine": 40,
+        "startOffset": 69,
+        "endOffset": 81
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this persistent entity with a simple POJO or DTO object.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "cwe",
+        "owasp-a5",
+        "spring"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_izPw2SI8EKf84E",
+      "rule": "java:S1948",
+      "severity": "CRITICAL",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/entities/Course.java",
+      "project": "gestion-station-skii",
+      "line": 38,
+      "hash": "3be42abab3e06969d38d2de7210afea6",
+      "textRange": {
+        "startLine": 38,
+        "endLine": 38,
+        "startOffset": 19,
+        "endOffset": 32
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make \"registrations\" private or transient.",
+      "effort": "30min",
+      "debt": "30min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "cwe",
+        "serialization"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_jiPw2SI8EKf84H",
+      "rule": "java:S1948",
+      "severity": "CRITICAL",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/entities/Instructor.java",
+      "project": "gestion-station-skii",
+      "line": 29,
+      "hash": "4ff493939f787b7d811d99a4ac1d6332",
+      "textRange": {
+        "startLine": 29,
+        "endLine": 29,
+        "startOffset": 13,
+        "endOffset": 20
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make \"courses\" private or transient.",
+      "effort": "30min",
+      "debt": "30min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "cwe",
+        "serialization"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_jRPw2SI8EKf84G",
+      "rule": "java:S1128",
+      "severity": "MINOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/entities/Piste.java",
+      "project": "gestion-station-skii",
+      "line": 8,
+      "hash": "416e949692a459c42e7e94c8cbfa734f",
+      "textRange": {
+        "startLine": 8,
+        "endLine": 8,
+        "startOffset": 7,
+        "endOffset": 50
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this unused import 'com.fasterxml.jackson.annotation.JsonIgnore'.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "unused"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_jRPw2SI8EKf84F",
+      "rule": "java:S1948",
+      "severity": "CRITICAL",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/entities/Piste.java",
+      "project": "gestion-station-skii",
+      "line": 34,
+      "hash": "b5f79c33fb85d7b334fd7fc39a7d26e9",
+      "textRange": {
+        "startLine": 34,
+        "endLine": 34,
+        "startOffset": 12,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make \"skiers\" private or transient.",
+      "effort": "30min",
+      "debt": "30min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "cwe",
+        "serialization"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_dMPw2SI8EKf84D",
+      "rule": "java:S1128",
+      "severity": "MINOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/entities/Skier.java",
+      "project": "gestion-station-skii",
+      "line": 5,
+      "hash": "bb3900a63a8cecc1e79592e054915c97",
+      "textRange": {
+        "startLine": 5,
+        "endLine": 5,
+        "startOffset": 7,
+        "endOffset": 21
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this unused import 'java.util.List'.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "unused"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_dLPw2SI8EKf84C",
+      "rule": "java:S1948",
+      "severity": "CRITICAL",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/entities/Skier.java",
+      "project": "gestion-station-skii",
+      "line": 47,
+      "hash": "3be42abab3e06969d38d2de7210afea6",
+      "textRange": {
+        "startLine": 47,
+        "endLine": 47,
+        "startOffset": 19,
+        "endOffset": 32
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make \"registrations\" private or transient.",
+      "effort": "30min",
+      "debt": "30min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "cwe",
+        "serialization"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_j3Pw2SI8EKf84J",
+      "rule": "java:S100",
+      "severity": "MINOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/repositories/IRegistrationRepository.java",
+      "project": "gestion-station-skii",
+      "line": 23,
+      "hash": "16c1aa248f6dff7c1cd628e009c25869",
+      "textRange": {
+        "startLine": 23,
+        "endLine": 23,
+        "startOffset": 9,
+        "endOffset": 67
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Rename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "convention"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_j3Pw2SI8EKf84K",
+      "rule": "java:S125",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/repositories/IRegistrationRepository.java",
+      "project": "gestion-station-skii",
+      "line": 25,
+      "hash": "e0ae67c91204d57cb165f86f477604fc",
+      "textRange": {
+        "startLine": 25,
+        "endLine": 25,
+        "startOffset": 6,
+        "endOffset": 114
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "This block of commented-out lines of code should be removed.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "unused"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_jvPw2SI8EKf84I",
+      "rule": "java:S100",
+      "severity": "MINOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/repositories/ISkierRepository.java",
+      "project": "gestion-station-skii",
+      "line": 11,
+      "hash": "f890bc0d191fa6c48f3ecad1cd92e25b",
+      "textRange": {
+        "startLine": 11,
+        "endLine": 11,
+        "startOffset": 15,
+        "endOffset": 41
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Rename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "convention"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lVPw2SI8EKf84b",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 18,
+      "hash": "35752d3e48301b2fe4445ad49d9259e3",
+      "textRange": {
+        "startLine": 18,
+        "endLine": 18,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lWPw2SI8EKf84c",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 20,
+      "hash": "f50fd737e640f134e3893a0c63f195b0",
+      "textRange": {
+        "startLine": 20,
+        "endLine": 20,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lWPw2SI8EKf84d",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 26,
+      "hash": "1283a198749db74bb180efe8361f34a7",
+      "textRange": {
+        "startLine": 26,
+        "endLine": 26,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lWPw2SI8EKf84e",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 28,
+      "hash": "6b57f4de98f7902884beabbdbf79701a",
+      "textRange": {
+        "startLine": 28,
+        "endLine": 28,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lWPw2SI8EKf84f",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 34,
+      "hash": "ce7177a973700e404beb020bbdd986ce",
+      "textRange": {
+        "startLine": 34,
+        "endLine": 34,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lWPw2SI8EKf84g",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 36,
+      "hash": "06fe5a65f1e21ac90c2a4e5219f8bb34",
+      "textRange": {
+        "startLine": 36,
+        "endLine": 36,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lWPw2SI8EKf84h",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 42,
+      "hash": "ed6441cb4c76cad9431f9753c577b674",
+      "textRange": {
+        "startLine": 42,
+        "endLine": 42,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lWPw2SI8EKf84i",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 45,
+      "hash": "a52b642ee5b8be4681c1de54b0c4e0e4",
+      "textRange": {
+        "startLine": 45,
+        "endLine": 45,
+        "startOffset": 12,
+        "endOffset": 22
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lWPw2SI8EKf84j",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 47,
+      "hash": "461bc842b61c28e9775d3f83310efc05",
+      "textRange": {
+        "startLine": 47,
+        "endLine": 47,
+        "startOffset": 12,
+        "endOffset": 22
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mcPw2SI8EKf84z",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/InstructorServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 21,
+      "hash": "5fec9464e39e0fc2511bad3fafb0a5ed",
+      "textRange": {
+        "startLine": 21,
+        "endLine": 21,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mcPw2SI8EKf840",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/InstructorServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 22,
+      "hash": "194066ca76e3608627aad97762d11706",
+      "textRange": {
+        "startLine": 22,
+        "endLine": 22,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mcPw2SI8EKf841",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/InstructorServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 24,
+      "hash": "48128d301b5b23124ac37888ac942769",
+      "textRange": {
+        "startLine": 24,
+        "endLine": 24,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mcPw2SI8EKf842",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/InstructorServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 30,
+      "hash": "bec32352805aef3d8758400e871f217e",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mcPw2SI8EKf843",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/InstructorServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 32,
+      "hash": "ab8a7e6c3a526e7f1ec5202cb8b36c90",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mcPw2SI8EKf844",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/InstructorServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 38,
+      "hash": "bd6488b0e1c7c2a5efab15210374a708",
+      "textRange": {
+        "startLine": 38,
+        "endLine": 38,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mcPw2SI8EKf845",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/InstructorServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 39,
+      "hash": "10664d5a8a9078293e448fd7498769b6",
+      "textRange": {
+        "startLine": 39,
+        "endLine": 39,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mcPw2SI8EKf846",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/InstructorServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 41,
+      "hash": "070fe4ca06ff453018058a30479f343d",
+      "textRange": {
+        "startLine": 41,
+        "endLine": 41,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mcPw2SI8EKf847",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/InstructorServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 47,
+      "hash": "4dcd894bd5637d84cd6924b37afe00c2",
+      "textRange": {
+        "startLine": 47,
+        "endLine": 47,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mcPw2SI8EKf848",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/InstructorServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 48,
+      "hash": "28c8b763f69a0d2bd5f6945f343e393b",
+      "textRange": {
+        "startLine": 48,
+        "endLine": 48,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mcPw2SI8EKf849",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/InstructorServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 51,
+      "hash": "29e9ca4bc065a837e53a8219eaec6aa0",
+      "textRange": {
+        "startLine": 51,
+        "endLine": 51,
+        "startOffset": 12,
+        "endOffset": 22
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mcPw2SI8EKf84-",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/InstructorServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 53,
+      "hash": "59b2df4d6b5cd79d4ce470708a2f4326",
+      "textRange": {
+        "startLine": 53,
+        "endLine": 53,
+        "startOffset": 12,
+        "endOffset": 22
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mcPw2SI8EKf84_",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/InstructorServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 60,
+      "hash": "c34b62a96cd19b7ef36b84654113755d",
+      "textRange": {
+        "startLine": 60,
+        "endLine": 60,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mcPw2SI8EKf85A",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/InstructorServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 61,
+      "hash": "7dba24c39c621e90e6e692cf4e554fa0",
+      "textRange": {
+        "startLine": 61,
+        "endLine": 61,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mdPw2SI8EKf85B",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/InstructorServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 65,
+      "hash": "f1c8d252ba20762806ffdd6156e07197",
+      "textRange": {
+        "startLine": 65,
+        "endLine": 65,
+        "startOffset": 12,
+        "endOffset": 22
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mdPw2SI8EKf85C",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/InstructorServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 74,
+      "hash": "e30e3a0e0d9706dd6d72ce792574fc50",
+      "textRange": {
+        "startLine": 74,
+        "endLine": 74,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lmPw2SI8EKf84k",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/PisteServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 18,
+      "hash": "965294a4c724940c2992901075086957",
+      "textRange": {
+        "startLine": 18,
+        "endLine": 18,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lmPw2SI8EKf84l",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/PisteServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 20,
+      "hash": "1a15e7f8dd69dce52c804c2643ca5914",
+      "textRange": {
+        "startLine": 20,
+        "endLine": 20,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lmPw2SI8EKf84m",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/PisteServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 26,
+      "hash": "285fe7362f8c991d235fed55a4630161",
+      "textRange": {
+        "startLine": 26,
+        "endLine": 26,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lmPw2SI8EKf84n",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/PisteServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 28,
+      "hash": "f06c642608764cd6e6597c6538af4f1d",
+      "textRange": {
+        "startLine": 28,
+        "endLine": 28,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lmPw2SI8EKf84o",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/PisteServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 34,
+      "hash": "738c858560bf12399a82b01b170792f2",
+      "textRange": {
+        "startLine": 34,
+        "endLine": 34,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lmPw2SI8EKf84p",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/PisteServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 36,
+      "hash": "87001141140b941e2389b97c938ec8ec",
+      "textRange": {
+        "startLine": 36,
+        "endLine": 36,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lmPw2SI8EKf84q",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/PisteServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 41,
+      "hash": "71a2023e8159b9c3b9211b373a572493",
+      "textRange": {
+        "startLine": 41,
+        "endLine": 41,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lnPw2SI8EKf84r",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/PisteServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 44,
+      "hash": "337ae52fb1b7a5a7feaa0b0f131b05fb",
+      "textRange": {
+        "startLine": 44,
+        "endLine": 44,
+        "startOffset": 12,
+        "endOffset": 22
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lnPw2SI8EKf84s",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/PisteServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 46,
+      "hash": "9e88ca554752b5db4a93cccb28be599e",
+      "textRange": {
+        "startLine": 46,
+        "endLine": 46,
+        "startOffset": 12,
+        "endOffset": 22
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mDPw2SI8EKf84v",
+      "rule": "java:S1128",
+      "severity": "MINOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 9,
+      "hash": "bc85862ff7cdbffb89e6786b139dccc4",
+      "textRange": {
+        "startLine": 9,
+        "endLine": 9,
+        "startOffset": 7,
+        "endOffset": 48
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this unused import 'com.example.gestionstationskii.entities'.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "unused"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mDPw2SI8EKf84t",
+      "rule": "java:S2259",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 36,
+      "hash": "8eb8d9b3ef3c95f612b1f208e2139d96",
+      "textRange": {
+        "startLine": 36,
+        "endLine": 36,
+        "startOffset": 8,
+        "endOffset": 30
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java",
+              "textRange": {
+                "startLine": 36,
+                "endLine": 36,
+                "startOffset": 8,
+                "endOffset": 30
+              },
+              "msg": "'registration' is dereferenced.",
+              "msgFormattings": []
+            },
+            {
+              "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java",
+              "textRange": {
+                "startLine": 34,
+                "endLine": 34,
+                "startOffset": 8,
+                "endOffset": 98
+              },
+              "msg": "Implies 'registration' can be null.",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "A \"NullPointerException\" could be thrown; \"registration\" is nullable here.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "cert",
+        "cwe"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mDPw2SI8EKf84u",
+      "rule": "java:S3776",
+      "severity": "CRITICAL",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 42,
+      "hash": "199f6a15c3e3902b0a22ab7ffd18387f",
+      "textRange": {
+        "startLine": 42,
+        "endLine": 42,
+        "startOffset": 24,
+        "endOffset": 64
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java",
+              "textRange": {
+                "startLine": 46,
+                "endLine": 46,
+                "startOffset": 8,
+                "endOffset": 10
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java",
+              "textRange": {
+                "startLine": 46,
+                "endLine": 46,
+                "startOffset": 26,
+                "endOffset": 28
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java",
+              "textRange": {
+                "startLine": 50,
+                "endLine": 50,
+                "startOffset": 8,
+                "endOffset": 10
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java",
+              "textRange": {
+                "startLine": 58,
+                "endLine": 58,
+                "startOffset": 8,
+                "endOffset": 14
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java",
+              "textRange": {
+                "startLine": 64,
+                "endLine": 64,
+                "startOffset": 16,
+                "endOffset": 18
+              },
+              "msg": "+2 (incl 1 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java",
+              "textRange": {
+                "startLine": 66,
+                "endLine": 66,
+                "startOffset": 20,
+                "endOffset": 22
+              },
+              "msg": "+3 (incl 2 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java",
+              "textRange": {
+                "startLine": 69,
+                "endLine": 69,
+                "startOffset": 22,
+                "endOffset": 26
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java",
+              "textRange": {
+                "startLine": 74,
+                "endLine": 74,
+                "startOffset": 16,
+                "endOffset": 20
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java",
+              "textRange": {
+                "startLine": 80,
+                "endLine": 80,
+                "startOffset": 16,
+                "endOffset": 18
+              },
+              "msg": "+2 (incl 1 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java",
+              "textRange": {
+                "startLine": 82,
+                "endLine": 82,
+                "startOffset": 20,
+                "endOffset": 22
+              },
+              "msg": "+3 (incl 2 for nesting)",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java",
+              "textRange": {
+                "startLine": 85,
+                "endLine": 85,
+                "startOffset": 22,
+                "endOffset": 26
+              },
+              "msg": "+1",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Refactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.",
+      "effort": "7min",
+      "debt": "7min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "brain-overload"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mSPw2SI8EKf84x",
+      "rule": "java:S2259",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/SkierServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 52,
+      "hash": "95d223adc41ad4801312e9e390831920",
+      "textRange": {
+        "startLine": 52,
+        "endLine": 52,
+        "startOffset": 8,
+        "endOffset": 29
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/SkierServicesImpl.java",
+              "textRange": {
+                "startLine": 52,
+                "endLine": 52,
+                "startOffset": 8,
+                "endOffset": 29
+              },
+              "msg": "'skier' is dereferenced.",
+              "msgFormattings": []
+            },
+            {
+              "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/SkierServicesImpl.java",
+              "textRange": {
+                "startLine": 50,
+                "endLine": 50,
+                "startOffset": 8,
+                "endOffset": 70
+              },
+              "msg": "Implies 'skier' can be null.",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "A \"NullPointerException\" could be thrown; \"skier\" is nullable here.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "cert",
+        "cwe"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mSPw2SI8EKf84y",
+      "rule": "java:S1874",
+      "severity": "MINOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/SkierServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 59,
+      "hash": "968312f339a0c59694c178e28aa7f8c1",
+      "textRange": {
+        "startLine": 59,
+        "endLine": 59,
+        "startOffset": 41,
+        "endOffset": 48
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this use of \"getById\"; it is deprecated.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "cert",
+        "cwe",
+        "obsolete"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mSPw2SI8EKf84w",
+      "rule": "java:S2259",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/SkierServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 84,
+      "hash": "aa53320e832f2eb29e948914bfeef7cd",
+      "textRange": {
+        "startLine": 84,
+        "endLine": 84,
+        "startOffset": 12,
+        "endOffset": 27
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/SkierServicesImpl.java",
+              "textRange": {
+                "startLine": 84,
+                "endLine": 84,
+                "startOffset": 12,
+                "endOffset": 27
+              },
+              "msg": "'skier' is dereferenced.",
+              "msgFormattings": []
+            },
+            {
+              "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/SkierServicesImpl.java",
+              "textRange": {
+                "startLine": 81,
+                "endLine": 81,
+                "startOffset": 8,
+                "endOffset": 71
+              },
+              "msg": "Implies 'skier' can be null.",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "A \"NullPointerException\" could be thrown; \"skier\" is nullable here.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "cert",
+        "cwe"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lNPw2SI8EKf84Z",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/SubscriptionServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 61,
+      "hash": "232847adea2264941418daeb863267ac",
+      "textRange": {
+        "startLine": 61,
+        "endLine": 61,
+        "startOffset": 12,
+        "endOffset": 22
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_lNPw2SI8EKf84a",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "gestion-station-skii:src/main/java/com/example/gestionstationskii/services/SubscriptionServicesImpl.java",
+      "project": "gestion-station-skii",
+      "line": 75,
+      "hash": "60fd24f98d0fe17ae2d975c0b4a91cb9",
+      "textRange": {
+        "startLine": 75,
+        "endLine": 75,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out or System.err by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "owasp-a3"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_nKPw2SI8EKf85G",
+      "rule": "java:S2699",
+      "severity": "BLOCKER",
+      "component": "gestion-station-skii:src/test/java/com/example/gestionstationskii/GestionStationSkiiApplicationTests.java",
+      "project": "gestion-station-skii",
+      "line": 10,
+      "hash": "9da319abd9f20a8cf2db6edcaf58d7f1",
+      "textRange": {
+        "startLine": 10,
+        "endLine": 10,
+        "startOffset": 9,
+        "endOffset": 21
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add at least one assertion to this test case.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "junit",
+        "tests"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": false,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_nAPw2SI8EKf85F",
+      "rule": "java:S5786",
+      "severity": "INFO",
+      "component": "gestion-station-skii:src/test/java/com/example/gestionstationskii/contextSpring/CourseServicesImplTest.java",
+      "project": "gestion-station-skii",
+      "line": 16,
+      "hash": "f38a8501b8ed6ef2d6d096be252f50a4",
+      "textRange": {
+        "startLine": 16,
+        "endLine": 16,
+        "startOffset": 0,
+        "endOffset": 6
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this 'public' modifier.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "junit",
+        "tests"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_nSPw2SI8EKf85H",
+      "rule": "java:S5786",
+      "severity": "INFO",
+      "component": "gestion-station-skii:src/test/java/com/example/gestionstationskii/mockito/CourseServicesImplMockTest.java",
+      "project": "gestion-station-skii",
+      "line": 19,
+      "hash": "7b44b935c95257453bc2853506425a43",
+      "textRange": {
+        "startLine": 19,
+        "endLine": 19,
+        "startOffset": 0,
+        "endOffset": 6
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this 'public' modifier.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "junit",
+        "tests"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_m4Pw2SI8EKf85E",
+      "rule": "java:S5786",
+      "severity": "INFO",
+      "component": "gestion-station-skii:src/test/java/com/example/gestionstationskii/services/InstructorServiceImplMockitoTest.java",
+      "project": "gestion-station-skii",
+      "line": 20,
+      "hash": "ddd9af45c6c76292c110d39e654e491e",
+      "textRange": {
+        "startLine": 20,
+        "endLine": 20,
+        "startOffset": 0,
+        "endOffset": 6
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this 'public' modifier.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "junit",
+        "tests"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    },
+    {
+      "key": "AZxHH_mwPw2SI8EKf85D",
+      "rule": "java:S5786",
+      "severity": "INFO",
+      "component": "gestion-station-skii:src/test/java/com/example/gestionstationskii/services/InstructorServiceImplTest.java",
+      "project": "gestion-station-skii",
+      "line": 19,
+      "hash": "6e61be9821060541b4211708e07c56f0",
+      "textRange": {
+        "startLine": 19,
+        "endLine": 19,
+        "startOffset": 0,
+        "endOffset": 6
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this 'public' modifier.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "salimbrahem18@gmail.com",
+      "tags": [
+        "junit",
+        "tests"
+      ],
+      "creationDate": "2026-02-10T09:44:32+0000",
+      "updateDate": "2026-02-10T10:36:28+0000",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": true,
+      "messageFormattings": []
+    }
+  ],
+  "total": 70
+}
