@@ -18,6 +18,16 @@ def _group_issues_by_file(issues_json: dict) -> dict:
     return out
 
 
+def _limit_issues(issues: list[dict], limit: int = 25) -> list[dict]:
+    sev_order = {"BLOCKER": 0, "CRITICAL": 1, "MAJOR": 2, "MINOR": 3, "INFO": 4}
+    typ_order = {"VULNERABILITY": 0, "BUG": 1, "CODE_SMELL": 2}
+
+    def key(i):
+        return (sev_order.get(i.get("severity", "INFO"), 9), typ_order.get(i.get("type", "CODE_SMELL"), 9))
+
+    issues_sorted = sorted(issues, key=key)
+    return issues_sorted[:limit]
+
 def build_context(cfg: Config, logger) -> dict:
     sonar = SonarClient(cfg.sonar_host_url, cfg.sonar_token)
 
