@@ -1,0 +1,7 @@
+Génère un résumé court et actionnable (Markdown) du run.
+Inclure:
+- Quality Gate
+- Nombre de issues triées P0/P1/P2
+- Fichiers patchés + mode (FILES ou BRANCH)
+- Statut tests
+- Risques restants (si patch échoué)
