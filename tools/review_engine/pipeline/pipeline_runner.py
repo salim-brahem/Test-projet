@@ -10,7 +10,6 @@ from .retry import retry
 from .budgets import from_config
 
 from ..collectors.context_builder import build_context
-from ..analyzers.triage_engine import run_triage
 from ..analyzers.risk_engine import run_risk_engine
 
 from ..patching.patch_planner import make_patch_tasks
@@ -22,8 +21,10 @@ from ..verification.test_runner import mvn_test
 from ..reporting.report_writer import write_reports
 from ..reporting.evidence_collector import write_json
 
+
 def _run_id() -> str:
     return datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+
 
 def run_pipeline(cfg: Config, logger):
     os.makedirs("artifacts", exist_ok=True)
@@ -42,7 +43,9 @@ def run_pipeline(cfg: Config, logger):
 
     # 2) Context (retry because Sonar API can be flaky)
     context = retry(lambda: build_context(cfg, logger), tries=3, logger=logger)
-    Path("artifacts/sonar_context.json").write_text(json.dumps(context, indent=2), encoding="utf-8")
+    Path("artifacts/sonar_context.json").write_text(
+        json.dumps(context, indent=2), encoding="utf-8"
+    )
     logger.info("Context collected: artifacts/sonar_context.json")
 
     # 3) Risk engine (beyond Sonar)
@@ -50,35 +53,36 @@ def run_pipeline(cfg: Config, logger):
     write_json("artifacts/risks.json", {"findings": risks})
     logger.info(f"Risk findings: {len(risks)}")
 
-    # 4) Triage (LLM)
-    triage = retry(lambda: run_triage(cfg, context, logger), tries=2, logger=logger)
-    Path("artifacts/triage.json").write_text(json.dumps(triage, indent=2), encoding="utf-8")
-    logger.info("Triage written: artifacts/triage.json")
-
-    # 5) Plan patch tasks
-    tasks = make_patch_tasks(cfg, context, triage, logger)
-    Path("artifacts/patch_tasks.json").write_text(json.dumps(tasks, indent=2), encoding="utf-8")
-    logger.info(f"Patch tasks planned: {len(tasks['tasks'])}")
+    # 4) Plan patch tasks (NO TRIAGE)
+    tasks = make_patch_tasks(cfg, context, logger)
+    Path("artifacts/patch_tasks.json").write_text(
+        json.dumps(tasks, indent=2), encoding="utf-8"
+    )
+    logger.info(f"Patch tasks planned: {len(tasks.get('tasks', []))}")
 
     # Enforce budget: max tasks
-    tasks["tasks"] = tasks["tasks"][: budgets.max_tasks]
+    tasks["tasks"] = (tasks.get("tasks") or [])[: budgets.max_tasks]
 
-    # 6) Generate + validate patches
+    # 5) Generate + validate patches
     generated = []
     for it in range(budgets.max_iterations):
         logger.info(f"Patch iteration {it+1}/{budgets.max_iterations}")
         any_generated = False
 
-        for task in tasks["tasks"]:
+        for task in tasks.get("tasks", []):
             if task.get("status") == "DONE":
                 continue
 
-            patch_out = retry(lambda: generate_patch_for_task(cfg, context, task, logger), tries=2, logger=logger)
+            patch_out = retry(
+                lambda: generate_patch_for_task(cfg, context, task, logger),
+                tries=2,
+                logger=logger,
+            )
             val = validate_patch_output(cfg, task, patch_out, logger)
 
-            if not val["ok"]:
+            if not val.get("ok"):
                 task["status"] = "FAILED"
-                task["fail_reason"] = val["reason"]
+                task["fail_reason"] = val.get("reason")
                 continue
 
             task["status"] = "DONE"
@@ -89,7 +93,7 @@ def run_pipeline(cfg: Config, logger):
         if not any_generated:
             break
 
-    # 7) Apply according to OUTPUT_MODE
+    # 6) Apply according to OUTPUT_MODE
     if cfg.output_mode == "FILES":
         applied, failed_apply = apply_output_files_mode(cfg, generated, logger)
         tests_ok = True
@@ -97,10 +101,9 @@ def run_pipeline(cfg: Config, logger):
         applied, failed_apply = apply_output_branch_mode(cfg, generated, logger)
         tests_ok = mvn_test(logger)
 
-    # 8) Report (includes risks)
+    # 7) Report (includes risks)
     report = write_reports(
         context=context,
-        triage=triage,
         tasks=tasks,
         applied=applied,
         failed=failed_apply,
@@ -109,6 +112,8 @@ def run_pipeline(cfg: Config, logger):
         risks=risks,
         logger=logger,
     )
-    Path("artifacts/report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
+    Path("artifacts/report.json").write_text(
+        json.dumps(report, indent=2), encoding="utf-8"
+    )
     logger.info("Done. Reports generated in artifacts/")
     return report
