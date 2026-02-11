@@ -1,0 +1,83 @@
+--- a/src/main/java/com/example/gestionstationskii/repositories/IRegistrationRepository.java
++++ b/src/main/java/com/example/gestionstationskii/repositories/IRegistrationRepository.java
+@@ -22,7 +22,4 @@
+ public interface IRegistrationRepository extends CrudRepository<Registration, Long> {
+-
+-    /*
+-    List<Registration> findBySkier(Skier skier);
+-    */
+ }
+--- a/src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java
++++ b/src/main/java/com/example/gestionstationskii/services/CourseServicesImpl.java
+@@ -1,4 +1,6 @@
+ package com.example.gestionstationskii.services;
+ 
++import lombok.extern.slf4j.Slf4j;
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
+ import com.example.gestionstationskii.entities.Course;
+@@ -12,25 +14,26 @@
++@Slf4j
+ public class CourseServicesImpl implements ICourseServices {
+-
++    private static final Logger log = LoggerFactory.getLogger(CourseServicesImpl.class);
+ 
+     public List<Course> retrieveAllCourses() {
+-        System.out.println("Retrieving all courses");
++        log.info("Retrieving all courses");
+         return (List<Course>) courseRepository.findAll();
+     }
+ 
+     public Course addCourse(Course course) {
+-        System.out.println("Adding course");
++        log.info("Adding course");
+         return courseRepository.save(course);
+     }
+ 
+     public void deleteCourse(Long idCourse) {
+-        System.out.println("Deleting course with id: " + idCourse);
++        log.info("Deleting course with id: {}", idCourse);
+         courseRepository.deleteById(idCourse);
+     }
+ 
+     public Course updateCourse(Course course) {
+-        System.out.println("Updating course");
++        log.info("Updating course");
+         return courseRepository.save(course);
+     }
+ }
+--- a/src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java
++++ b/src/main/java/com/example/gestionstationskii/services/RegistrationServicesImpl.java
+@@ -33,5 +33,6 @@
+     public Registration assignRegistrationToSkier(Long numRegistration, Long numSkier) {
+-        Registration registration = registrationRepository.findById(numRegistration).orElse(null);
++        Registration registration = registrationRepository.findById(numRegistration)
++                .orElseThrow(() -> new IllegalArgumentException("Registration not found with id: " + numRegistration));
+         Skier skier = skierRepository.findById(numSkier).orElse(null);
+-        registration.setSkier(skier);
++        if (skier != null) registration.setSkier(skier);
+         return registrationRepository.save(registration);
+--- a/src/main/java/com/example/gestionstationskii/services/SkierServicesImpl.java
++++ b/src/main/java/com/example/gestionstationskii/services/SkierServicesImpl.java
+@@ -49,5 +49,7 @@
+     public Skier assignSkierToPiste(Long numSkier, Long numPiste) {
+-        Skier skier = skierRepository.findById(numSkier).orElse(null);
++        Skier skier = skierRepository.findById(numSkier)
++                .orElseThrow(() -> new IllegalArgumentException("Skier not found"));
+         Piste piste = pisteRepository.findById(numPiste).orElse(null);
+-        skier.getPistes().add(piste);
++        if (piste != null) {
++            skier.getPistes().add(piste);
++        }
+         return skierRepository.save(skier);
+@@ -81,5 +83,7 @@
+     public Skier assignSkierToSubscription(Long numSkier, Long numSubscription) {
+-        Skier skier = skierRepository.findById(numSkier).orElse(null);
++        Skier skier = skierRepository.findById(numSkier)
++                .orElseThrow(() -> new IllegalArgumentException("Skier not found"));
+         Subscription subscription = subscriptionRepository.findById(numSubscription).orElse(null);
+-        skier.setSubscription(subscription);
++        if (subscription != null) {
++            skier.setSubscription(subscription);
++        }
+         return skierRepository.save(skier);
