@@ -3,103 +3,73 @@ import re
 from typing import Any, Dict, List
 
 
-# ---------- JSON extractors ----------
+# ---------- Helpers ----------
 
 _JSON_OBJ_RE = re.compile(r"\{.*\}", re.DOTALL)
 _JSON_ARR_RE = re.compile(r"\[.*\]", re.DOTALL)
 
-
-def _try_load(s: str) -> Any:
-    return json.loads(s)
+_DIFF_BLOCK_RE = re.compile(r"(^diff --git .*$.*?)(?=^diff --git |\Z)", re.DOTALL | re.MULTILINE)
 
 
-def extract_first_json_object(text: str) -> Dict[str, Any]:
+def _strip_json_comments(s: str) -> str:
+    # remove //... and /*...*/ (best effort)
+    s = re.sub(r"//.*?$", "", s, flags=re.MULTILINE)
+    s = re.sub(r"/\*.*?\*/", "", s, flags=re.DOTALL)
+    return s
+
+
+def _remove_trailing_commas(s: str) -> str:
+    # ,} or ,]  -> } or ]
+    return re.sub(r",\s*([}\]])", r"\1", s)
+
+
+def _single_to_double_quotes_best_effort(s: str) -> str:
     """
-    Extract the first JSON object {...} from LLM output.
-    Accepts:
-    - pure JSON
-    - JSON inside fenced blocks ```json ... ```
-    - JSON mixed with commentary
+    Best effort conversion:
+    - 'key': -> "key":
+    - : 'value' -> : "value"
+    This is heuristic and intentionally limited.
     """
-    if not text:
-        raise ValueError("No text provided")
-
-    t = text.strip()
-
-    # Fast path: whole text is JSON object
-    if t.startswith("{") and t.endswith("}"):
-        obj = _try_load(t)
-        if isinstance(obj, dict):
-            return obj
-
-    # Try fenced blocks first
-    obj = _extract_json_from_fences(t, expect="object")
-    if obj is not None:
-        return obj
-
-    # Find first {...} (best effort)
-    m = _JSON_OBJ_RE.search(t)
-    if not m:
-        raise ValueError("No JSON object found in text")
-    candidate = m.group(0)
-
-    obj = _try_load(candidate)
-    if not isinstance(obj, dict):
-        raise ValueError("Parsed JSON is not an object")
-    return obj
+    s = re.sub(r"(?P<prefix>[\{\s,])'(?P<key>[^'\n\r]+?)'\s*:", r'\g<prefix>"\g<key>":', s)
+    s = re.sub(r":\s*'(?P<val>[^'\n\r]*?)'(?P<suffix>[\s,}\]])", r': "\g<val>"\g<suffix>', s)
+    return s
 
 
-def extract_first_json_array(text: str) -> List[Any]:
+def _try_load_json(s: str) -> Any:
+    raw = s.strip()
+    raw = _strip_json_comments(raw)
+    raw = _remove_trailing_commas(raw)
+
+    # 1) strict JSON
+    try:
+        return json.loads(raw)
+    except Exception:
+        pass
+
+    # 2) relaxed: single quotes -> double quotes best effort
+    relaxed = _single_to_double_quotes_best_effort(raw)
+    relaxed = _remove_trailing_commas(relaxed)
+    return json.loads(relaxed)
+
+
+def _extract_from_fences(text: str, wanted: str) -> Any | None:
     """
-    Extract the first JSON array [...] from LLM output.
-    Useful when prompt returns a list (e.g. risks).
-    """
-    if not text:
-        raise ValueError("No text provided")
-
-    t = text.strip()
-
-    # Fast path: whole text is JSON array
-    if t.startswith("[") and t.endswith("]"):
-        arr = _try_load(t)
-        if isinstance(arr, list):
-            return arr
-
-    # Try fenced blocks first
-    arr = _extract_json_from_fences(t, expect="array")
-    if arr is not None:
-        return arr
-
-    # Find first [...]
-    m = _JSON_ARR_RE.search(t)
-    if not m:
-        raise ValueError("No JSON array found in text")
-    candidate = m.group(0)
-
-    arr = _try_load(candidate)
-    if not isinstance(arr, list):
-        raise ValueError("Parsed JSON is not an array")
-    return arr
-
-
-def _extract_json_from_fences(text: str, expect: str) -> Any | None:
-    """
-    Extract JSON from fenced code blocks. Returns dict/list or None if not found.
+    Extract JSON from fenced blocks ```json ... ``` or diff from ```diff ... ```
+    wanted in {"json_object","json_array","diff"}
     """
     if "```" not in text:
         return None
 
     parts = text.split("```")
-    # odd indexes are inside fences
     for i in range(1, len(parts), 2):
         block = parts[i].strip()
+        if not block:
+            continue
 
-        # remove optional language label at first line: "json", "javascript", etc.
         lines = block.splitlines()
         if not lines:
             continue
 
-        # If first line is a language token, drop it
         first = lines[0].strip().lower()
         if first in ("json", "javascript", "js", "python", "yaml", "yml", "diff", "patch"):
             block = "\n".join(lines[1:]).strip()
@@ -107,98 +77,113 @@ def _extract_json_from_fences(text: str, expect: str) -> Any | None:
         if not block:
             continue
 
-        # try object/array parse
+        if wanted == "diff":
+            if block.startswith("diff --git ") or ("--- " in block and "+++ " in block and "@@" in block):
+                return block.strip()
+            continue
+
+        # wanted json
         try:
-            parsed = _try_load(block)
+            parsed = _try_load_json(block)
         except Exception:
             continue
 
-        if expect == "object" and isinstance(parsed, dict):
+        if wanted == "json_object" and isinstance(parsed, dict):
             return parsed
-        if expect == "array" and isinstance(parsed, list):
+        if wanted == "json_array" and isinstance(parsed, list):
             return parsed
 
     return None
 
 
-# ---------- Git diff extractors ----------
+# ---------- Public API: JSON ----------
 
-# Matches blocks starting with "diff --git" up to next "diff --git" or end
-_DIFF_BLOCK_RE = re.compile(r"(^diff --git .*$.*?)(?=^diff --git |\Z)", re.DOTALL | re.MULTILINE)
-
-
-def looks_like_git_diff(text: str) -> bool:
-    """
-    Heuristic detector for unified diffs.
-    """
-    if not text:
-        return False
-    t = text.strip()
-    return (
-        "diff --git " in t
-        or ("--- " in t and "+++ " in t)
-        or ("@@ " in t)
-    )
-
-
-def extract_git_diff(text: str) -> str:
-    """
-    Extract a git diff from LLM output.
-    Supports:
-    - raw diff output
-    - fenced ```diff ... ``` blocks
-    - diff mixed with commentary
-    """
+def extract_first_json_object(text: str) -> Dict[str, Any]:
     if not text:
         raise ValueError("No text provided")
 
     t = text.strip()
 
-    # Fast path: starts as a diff
+    # whole text
+    if t.startswith("{") and t.endswith("}"):
+        parsed = _try_load_json(t)
+        if isinstance(parsed, dict):
+            return parsed
+
+    # fenced blocks
+    obj = _extract_from_fences(t, "json_object")
+    if obj is not None:
+        return obj
+
+    # first {...}
+    m = _JSON_OBJ_RE.search(t)
+    if not m:
+        raise ValueError("No JSON object found in text")
+
+    candidate = m.group(0)
+    parsed = _try_load_json(candidate)
+    if not isinstance(parsed, dict):
+        raise ValueError("Parsed JSON is not an object")
+    return parsed
+
+
+def extract_first_json_array(text: str) -> List[Any]:
+    if not text:
+        raise ValueError("No text provided")
+
+    t = text.strip()
+
+    # whole text
+    if t.startswith("[") and t.endswith("]"):
+        parsed = _try_load_json(t)
+        if isinstance(parsed, list):
+            return parsed
+
+    # fenced blocks
+    arr = _extract_from_fences(t, "json_array")
+    if arr is not None:
+        return arr
+
+    # first [...]
+    m = _JSON_ARR_RE.search(t)
+    if not m:
+        raise ValueError("No JSON array found in text")
+
+    candidate = m.group(0)
+    parsed = _try_load_json(candidate)
+    if not isinstance(parsed, list):
+        raise ValueError("Parsed JSON is not an array")
+    return parsed
+
+
+# ---------- Public API: Git diff ----------
+
+def looks_like_git_diff(text: str) -> bool:
+    if not text:
+        return False
+    t = text.strip()
+    return ("diff --git " in t) or ("--- " in t and "+++ " in t) or ("@@ " in t)
+
+
+def extract_git_diff(text: str) -> str:
+    if not text:
+        raise ValueError("No text provided")
+
+    t = text.strip()
+
     if t.startswith("diff --git "):
         return t
 
-    # Try fenced blocks
-    diff = _extract_diff_from_fences(t)
+    diff = _extract_from_fences(t, "diff")
     if diff is not None:
         return diff
 
-    # Find diff --git blocks
     m = _DIFF_BLOCK_RE.search(t)
     if m:
         return m.group(1).strip()
 
-    # Fallback: unified diff markers without diff --git
     if ("--- " in t and "+++ " in t and "@@" in t):
         idx = t.find("--- ")
         return t[idx:].strip()
 
     raise ValueError("No git diff found in text")
-
-
-def _extract_diff_from_fences(text: str) -> str | None:
-    if "```" not in text:
-        return None
-
-    parts = text.split("```")
-    for i in range(1, len(parts), 2):
-        block = parts[i].strip()
-        if not block:
-            continue
-
-        lines = block.splitlines()
-        if not lines:
-            continue
-
-        first = lines[0].strip().lower()
-        # Drop language label
-        if first in ("diff", "patch"):
-            block = "\n".join(lines[1:]).strip()
-
-        if not block:
-            continue
-
-        if block.startswith("diff --git ") or ("--- " in block and "+++ " in block and "@@" in block):
-            return block.strip()
-
-    return None
