@@ -1,13 +1,46 @@
-from pathlib import Path
-import yaml
+import base64
+import requests
+from ..exceptions import SonarError
 
-def load_policy(path: str = "review-policy.yml") -> dict:
-    p = Path(path)
-    if not p.exists():
-        return {
-            "layering": "Controller -> Service -> Repository",
-            "dto": "DTO at boundaries; avoid exposing entities",
-            "errors": "Use @ControllerAdvice or ResponseStatusException",
-            "safe_refactor": True
+class SonarClient:
+    def __init__(self, host_url: str, token: str, timeout=30):
+        self.host_url = host_url.rstrip("/")
+        auth = base64.b64encode(f"{token}:".encode()).decode()
+        self.headers = {"Authorization": f"Basic {auth}"}
+        self.timeout = timeout
+
+    def get(self, path: str, params=None) -> dict:
+        url = f"{self.host_url}{path}"
+        try:
+            r = requests.get(url, headers=self.headers, params=params, timeout=self.timeout)
+            r.raise_for_status()
+            return r.json()
+        except Exception as e:
+            raise SonarError(f"Sonar API failed: {path} err={e}") from e
+
+    def quality_gate(self, project_key: str, branch: str | None) -> dict:
+        params = {"projectKey": project_key}
+        if branch:
+            params["branch"] = branch
+        return self.get("/api/qualitygates/project_status", params=params)
+
+    def measures(self, project_key: str, branch: str | None, metric_keys: list[str]) -> dict:
+        params = {"component": project_key, "metricKeys": ",".join(metric_keys)}
+        if branch:
+            params["branch"] = branch
+        return self.get("/api/measures/component", params=params)
+
+    def issues(self, project_key: str, branch: str | None, severities=None, types=None, ps=200) -> dict:
+        params = {
+            "componentKeys": project_key,
+            "resolved": "false",
+            "ps": ps,
+            "s": "SEVERITY",
         }
-    return yaml.safe_load(p.read_text(encoding="utf-8", errors="replace")) or {}
+        if branch:
+            params["branch"] = branch
+        if severities:
+            params["severities"] = ",".join(severities)
+        if types:
+            params["types"] = ",".join(types)
+        return self.get("/api/issues/search", params=params)
