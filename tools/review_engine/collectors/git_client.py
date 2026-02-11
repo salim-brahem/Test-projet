@@ -1,46 +1,28 @@
-import base64
-import requests
-from ..exceptions import SonarError
+import subprocess
+from typing import List
 
-class SonarClient:
-    def __init__(self, host_url: str, token: str, timeout=30):
-        self.host_url = host_url.rstrip("/")
-        auth = base64.b64encode(f"{token}:".encode()).decode()
-        self.headers = {"Authorization": f"Basic {auth}"}
-        self.timeout = timeout
+def _run(cmd: List[str]) -> str:
+    out = subprocess.check_output(cmd, stderr=subprocess.STDOUT)
+    return out.decode("utf-8", errors="replace")
 
-    def get(self, path: str, params=None) -> dict:
-        url = f"{self.host_url}{path}"
-        try:
-            r = requests.get(url, headers=self.headers, params=params, timeout=self.timeout)
-            r.raise_for_status()
-            return r.json()
-        except Exception as e:
-            raise SonarError(f"Sonar API failed: {path} err={e}") from e
+def changed_files(base_ref: str) -> List[str]:
+    txt = _run(["git", "diff", "--name-only", f"{base_ref}...HEAD"])
+    return [l.strip() for l in txt.splitlines() if l.strip()]
 
-    def quality_gate(self, project_key: str, branch: str | None) -> dict:
-        params = {"projectKey": project_key}
-        if branch:
-            params["branch"] = branch
-        return self.get("/api/qualitygates/project_status", params=params)
+def diff_text(base_ref: str) -> str:
+    return _run(["git", "diff", f"{base_ref}...HEAD"])
 
-    def measures(self, project_key: str, branch: str | None, metric_keys: list[str]) -> dict:
-        params = {"component": project_key, "metricKeys": ",".join(metric_keys)}
-        if branch:
-            params["branch"] = branch
-        return self.get("/api/measures/component", params=params)
+def create_branch(name: str):
+    _run(["git", "checkout", "-b", name])
 
-    def issues(self, project_key: str, branch: str | None, severities=None, types=None, ps=200) -> dict:
-        params = {
-            "componentKeys": project_key,
-            "resolved": "false",
-            "ps": ps,
-            "s": "SEVERITY",
-        }
-        if branch:
-            params["branch"] = branch
-        if severities:
-            params["severities"] = ",".join(severities)
-        if types:
-            params["types"] = ",".join(types)
-        return self.get("/api/issues/search", params=params)
+def checkout(name: str):
+    _run(["git", "checkout", name])
+
+def add_all():
+    _run(["git", "add", "."])
+
+def commit(msg: str):
+    _run(["git", "commit", "-m", msg])
+
+def push(branch: str):
+    _run(["git", "push", "origin", branch])

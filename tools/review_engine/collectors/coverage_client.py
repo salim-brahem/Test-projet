@@ -1,28 +1,43 @@
-import subprocess
-from typing import List
+from pathlib import Path
+import xml.etree.ElementTree as ET
 
-def _run(cmd: List[str]) -> str:
-    out = subprocess.check_output(cmd, stderr=subprocess.STDOUT)
-    return out.decode("utf-8", errors="replace")
+def parse_jacoco(xml_path: str) -> dict:
+    p = Path(xml_path)
+    if not p.exists():
+        return {"overall": None, "by_sourcefile": {}}
 
-def changed_files(base_ref: str) -> List[str]:
-    txt = _run(["git", "diff", "--name-only", f"{base_ref}...HEAD"])
-    return [l.strip() for l in txt.splitlines() if l.strip()]
+    root = ET.parse(p).getroot()
 
-def diff_text(base_ref: str) -> str:
-    return _run(["git", "diff", f"{base_ref}...HEAD"])
+    overall = None
+    for c in root.findall("counter"):
+        if c.attrib.get("type") == "LINE":
+            missed = int(c.attrib.get("missed", "0"))
+            covered = int(c.attrib.get("covered", "0"))
+            total = missed + covered
+            overall = (covered / total * 100.0) if total else None
+            break
 
-def create_branch(name: str):
-    _run(["git", "checkout", "-b", name])
+    by_sourcefile = {}
+    for pkg in root.findall("package"):
+        pkg_name = pkg.attrib.get("name", "")
+        for sf in pkg.findall("sourcefile"):
+            name = sf.attrib.get("name", "")
+            key = f"{pkg_name}/{name}" if pkg_name else name
+            cov = None
+            for c in sf.findall("counter"):
+                if c.attrib.get("type") == "LINE":
+                    missed = int(c.attrib.get("missed", "0"))
+                    covered = int(c.attrib.get("covered", "0"))
+                    total = missed + covered
+                    cov = (covered / total * 100.0) if total else None
+                    break
+            by_sourcefile[key] = cov
 
-def checkout(name: str):
-    _run(["git", "checkout", name])
+    return {"overall": overall, "by_sourcefile": by_sourcefile}
 
-def add_all():
-    _run(["git", "add", "."])
-
-def commit(msg: str):
-    _run(["git", "commit", "-m", msg])
-
-def push(branch: str):
-    _run(["git", "push", "origin", branch])
+def guess_file_coverage(java_path: str, jacoco: dict) -> float | None:
+    name = Path(java_path).name
+    for k, v in jacoco.get("by_sourcefile", {}).items():
+        if k.endswith("/" + name) or k.endswith(name):
+            return v
+    return None
